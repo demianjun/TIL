@@ -9,15 +9,10 @@ swift practice
  ## Conditional Statements
  ---
 
- - 학점을 입력받아 각각의 등급을 반환해주는 함수 (4.5 = A+,  4.0 = A, 3.5 = B+ ...)
- - 특정 달을 숫자로 입력 받아서 문자열로 반환하는 함수 (1 = "Jan" , 2 = "Feb", ...)
- - 세 수를 입력받아 세 수의 곱이 양수이면 true, 그렇지 않으면 false 를 반환하는 함수
-   (switch where clause 를 이용해 풀어볼 수 있으면 해보기)
+// 학점을 입력받아 각각의 등급을 반환해주는 함수 (4.5 = A+,  4.0 = A, 3.5 = B+ ...)
+---
 
-
-//:---
-
-func 등급(학점:Double) -> String {
+func 등급(학점:Double) -> String { 
     if 학점 == 4.5 {
         return "A+"
     } else if  학점 == 4.0{
@@ -38,7 +33,8 @@ func 등급(학점:Double) -> String {
 등급(학점: 3.0)
 
 //: ----
-달을 정술 입력받아 문자로 출력하기
+
+특정 달을 숫자로 입력 받아서 문자열로 반환하는 함수 (1 = "Jan" , 2 = "Feb", ...)
 
 func transMonth(month: Int) -> String {
     switch month {
