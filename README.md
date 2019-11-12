@@ -9,8 +9,9 @@ swift practice
  ## Conditional Statements
  ---
 
-// 학점을 입력받아 각각의 등급을 반환해주는 함수 (4.5 = A+,  4.0 = A, 3.5 = B+ ...)
----
+
+
+학점을 입력받아 각각의 등급을 반환해주는 함수 (4.5 = A+,  4.0 = A, 3.5 = B+ ...)
 
 func 등급(학점:Double) -> String { 
     if 학점 == 4.5 {
