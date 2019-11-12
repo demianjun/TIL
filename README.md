@@ -67,6 +67,7 @@ func transMonth(month: Int) -> String {
     
 }
 transMonth(month: 12)
+
 //:---
 
 세 수를 입력받아 세 수의 곱이 양수이면 true, 그렇지 않으면 false 를 반환하는 함수
