@@ -91,7 +91,7 @@ inputThreeNum(num1: -27, num2: -11, num3: 3)
  ## Loops
  ---
 
-####반복문(for , while , repeat - while)을 이용해 아래 문제들을 구현해보세요.
+#### 반복문(for , while , repeat - while)을 이용해 아래 문제들을 구현해보세요.
 자연수 하나를 입력받아 그 수의 Factorial 을 구하는 함수
 (Factorial 참고: 어떤 수가 주어졌을 때 그 수를 포함해 그 수보다 작은 모든 수를 곱한 것)
 ex) 5! = 5 x 4 x 3 x 2 x 1
