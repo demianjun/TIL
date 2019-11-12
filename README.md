@@ -15,6 +15,7 @@ swift practice
    (switch where clause 를 이용해 풀어볼 수 있으면 해보기)
 
 
+//:---
 
 func 등급(학점:Double) -> String {
     if 학점 == 4.5 {
@@ -37,6 +38,8 @@ func 등급(학점:Double) -> String {
 등급(학점: 3.0)
 
 //: ----
+달을 정술 입력받아 문자로 출력하기
+
 func transMonth(month: Int) -> String {
     switch month {
     case month where month == 1:
