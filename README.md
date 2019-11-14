@@ -21,4 +21,4 @@
 	- [Swift Conditional practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/191112.md)
 
 - 191114 - Collection 예제연습
-	-  [Swift Collection practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/collection-practice.md)
+	-  [Swift Collection practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/collection_practice.md)
