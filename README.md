@@ -7,4 +7,6 @@
 
 ## Swift practice
 
-- 191111 - Conditional Statements, Loops, Control Transfer 예제연습 [Swift practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/191112.md)
+- 191112 - Conditional Statements, Loops, Control Transfer 예제연습 [Swift Conditional practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/191112.md)
+
+- 191114 - Collection 예제연습 [Swift Collection practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/collection-practice.md)
