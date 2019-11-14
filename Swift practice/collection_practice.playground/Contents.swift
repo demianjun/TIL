@@ -77,7 +77,7 @@ func countArrayNum0(array0:[Int])
     }
     print(countArr)
 }
-countArrayNum0(array0: [1, 3, 3, 3, 8])]
+countArrayNum0(array0: [1, 3, 3, 3, 8])
 // tuple로 도전
 
 
