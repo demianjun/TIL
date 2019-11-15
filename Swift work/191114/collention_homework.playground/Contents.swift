@@ -25,17 +25,31 @@ inputNum(num:278)
 //ex) true - 123, 310, 369   /  false - 100, 222, 770
 
 
-func checkDiffNum(a: Int) //-> Bool
+func checkDiffNum(a: Int) -> Bool
 {
-    let elemnetNum = String(a)
-    for i in elemnetNum
-    {
-        print(i)
-    }
+    var arr:[Character] = []
+    let numToElement = String(a)
+    
+        for j in numToElement
+        {
+            arr.append(j)
+       
+        }
+    
+        if (arr[0] != arr[1] && arr[1] != arr[2] && arr[0] != arr[2]) == true
+        {
+            return true
+        } else {
+            return false
+        }
     
 }
 
-checkDiffNum(a: 278)
+checkDiffNum(a: 133)
+print()
+print()
+
+//---
 
 
 //[ 도전 과제 ]
@@ -43,8 +57,36 @@ checkDiffNum(a: 278)
 //  ex) ["a", "b", "c", "a", "e", "d", "c"]  ->  ["b", "e" ,"d"]
 
 
+var saveArr:[String] = []
 
+func compareArr(defaultArr:[String]) -> [String] {
+    for i in defaultArr {
+        if defaultArr.firstIndex(of: i) == defaultArr.lastIndex(of: i) {
+            saveArr.append(i)
+        }
+    }
+    return saveArr
+}
+
+let result = compareArr(defaultArr: ["a", "b", "c", "a", "e", "d", "c"])
+
+
+//---
 
 
 //- 별도로 전달한 식육목 모식도 라는 자료를 보고 Dictionary 자료형에 맞도록 중첩형태로 데이터를 저장하고
 //  + 해당 변수에서 표범 하위 분류를 찾아 사자와 호랑이를 출력하기
+
+let 동물 = [
+    "식육목" :[
+        "개과":[
+            "개":["자칼", "늑대", "북미산이리"],
+            "여우":["아메리카 여우", "유럽 여우"]
+             ],
+        "고양이과":[
+            "고양이":["고양이", "살쾡이"],
+            "표범":["사자", "호랑이"]
+                ]
+            ]
+        ]
+print(동물["식육목"]!["고양이과"]!["표범"]!)
