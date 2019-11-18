@@ -21,7 +21,7 @@
 
 - [191114 homework](https://github.com/demianjun/TIL/tree/master/Swift%20work/191114/optional_enum_homework.md)
 
-- [191115 homework](https://github.com/demianjun/TIL/tree/master/Swift%20work/191115/closure_homwork_homework.md)
+- [191115 homework](https://github.com/demianjun/TIL/tree/master/Swift%20work/191115/closure_homework.md)
 
 
 ## Swift practice
