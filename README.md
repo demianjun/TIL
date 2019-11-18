@@ -11,6 +11,9 @@
 - 191115 - Closure 개념정리
 	- [Closure](https://github.com/demianjun/TIL/blob/master/Swift%20command/191115_closure.md)
 
+- 191118 - OOP(Object Oriented Programming) 개념정리
+	- [OOP](https://github.com/demianjun/TIL/blob/master/Swift%20command/191118_OOP.md)
+
 
 	
 
@@ -23,7 +26,7 @@
 
 - [191115 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191115/closure_homework.md)
 
-
+- [191118 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191118/OOP_homework.md)
 
 
 
@@ -34,3 +37,6 @@
 
 - 191113 - Collection 연습문제
 	-  [Swift Collection practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/collection_practice.md)
+
+- 191118 - OOP 연습문제
+	-  [Swift OOP practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/OOP_practice.md)
