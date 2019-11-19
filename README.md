@@ -14,6 +14,11 @@
 - 191118 - OOP(Object Oriented Programming) 개념정리
 	- [OOP](https://github.com/demianjun/TIL/blob/master/Swift%20command/191118_OOP.md)
 
+- 191119 - AccessLevels 개념정리
+	- [AccessLevels](https://github.com/demianjun/TIL/blob/master/Swift%20command/191119_AccessLevels.md)
+
+- 191119 - OOP_Charater 개념정리
+	- [OOP_Charater](https://github.com/demianjun/TIL/blob/master/Swift%20command/191119_OOP_Charater.md)
 
 	
 
@@ -27,6 +32,9 @@
 - [191115 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191115/closure_homework.md)
 
 - [191118 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191118/OOP_homework.md)
+
+
+- [191119 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191119/OOP_charac_homework.md)
 
 
 
