@@ -36,6 +36,10 @@
 
 - [191119 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191119/OOP_charac_homework.md)
 
+- [191121 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191121/191121_coding_homework.md)
+	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191121/191121_project_1.png)
+	- [Project_2](https://github.com/demianjun/TIL/blob/master/Swift%20work/191121/191121_project_2.png)
+
 
 
 ## Swift practice
