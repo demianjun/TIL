@@ -20,6 +20,12 @@
 - 191119 - OOP_Charater 개념정리
 	- [OOP_Charater](https://github.com/demianjun/TIL/blob/master/Swift%20command/191119_OOP_Charater.md)
 
+- 191122 - UI_Guide 개념정리
+	- [UI_Guide](https://github.com/demianjun/TIL/blob/master/Swift%20command/191122_UI_Guide.md)
+
+- 191125 - UIViewController 개념정리
+	- [UIViewController](https://github.com/demianjun/TIL/blob/master/Swift%20command/191125_UIViewController.md)
+
 	
 
 ## Swift homework
