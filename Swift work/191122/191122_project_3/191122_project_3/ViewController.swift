@@ -28,7 +28,7 @@ class ViewController: UIViewController {
           
         }
         
-        let sum: Int = arrayNums.reduce(0,{ (first: Int, second: Int) -> Int in
+        let _: Int = arrayNums.reduce(0,{ (first: Int, second: Int) -> Int in
         label_1.text = String(first + second)
         return first + second
         

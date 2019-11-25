@@ -35,18 +35,23 @@ class ViewController: UIViewController {
 
         })
         
-        
-        if b1%sum1 == 0 {
-            label_2.text = String("True")
-            
-        } else {
-            label_2.text = String("False")
-            
-        }
-        
-        
+        if b1 > 0 {
+                
+                if b1%sum1 == 0 {
+                    label_2.text = String("True")
+                    
+                } else {
+                    label_2.text = String("False")
+                    
+                }
+                
+            } else if b1 <= 0 {
+                label_2.text = String("정수입력")
+            }
 
-    }
+        }
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
