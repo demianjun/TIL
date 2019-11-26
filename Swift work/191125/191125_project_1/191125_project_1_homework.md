@@ -4,12 +4,12 @@
 
 import UIKit
 
-var counta = 0
-var label_b = UILabel()
-
-
 class AviewController: UIViewController {
 
+    var count = 0
+    var label_a = UILabel()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +24,14 @@ class AviewController: UIViewController {
         view.addSubview(buttonB)
         
 
-        label_b.frame = CGRect(x: 185, y: 350, width: 150, height: 100)
-        label_b.textColor = .label
-//        label_b.text = "A화면"
-        view.addSubview(label_b)
-             
+        label_a.frame = CGRect(x: 185, y: 350, width: 150, height: 100)
+        label_a.textColor = .label
+        view.addSubview(label_a)
+        
+        
+        
     }
+        
     
     @objc private func bTapButton(_ sender: UIButton){
         
@@ -37,13 +39,39 @@ class AviewController: UIViewController {
         b_VC.modalPresentationStyle = .fullScreen
         present(b_VC, animated: true)
         
-        countb += 1
-//        print(("countb : \(countb)"))
-        label_a.text = String(countb)
+        guard let vc = presentedViewController as? BviewController else { return }
+        let bviewcontrol = vc.label_b
+           
+        count += 1
+        bviewcontrol.text = String(count)
+//        print("check1")
         
         
         }
- 
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("AviewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("AviewWillDisappear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("AviewWillDisappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("AviewDidDisappear")
+    }
+    
 }
 ```
        
@@ -57,17 +85,16 @@ class AviewController: UIViewController {
 
 import UIKit
 
-var countb = 0
-var label_a = UILabel()
-
 class BviewController: UIViewController {
     
     
+    var label_b = UILabel()
+
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-           
-           print("viewDidLoad")
+        super.viewDidLoad()
+        
+        print("viewDidLoad")
         
         view.backgroundColor = .systemYellow
         
@@ -78,23 +105,50 @@ class BviewController: UIViewController {
         view.addSubview(buttonA)
         
 
-        label_a.frame = CGRect(x: 185, y: 350, width: 150, height: 100)
-        label_a.textColor = .label
-        
-        view.addSubview(label_a)
+        label_b.frame = CGRect(x: 185, y: 350, width: 150, height: 100)
+        label_b.textColor = .label 
+        view.addSubview(label_b)
         
         
     }
     
+   
+    
     @objc private func aTapButton(_ sender: UIButton){
            
-        counta += 1
-        dismiss(animated: true)
-//        print("counta : \(counta)")
+        guard let vc = presentingViewController as? AviewController else  { return }
+        let aviewcontrol = vc.label_a
+        _ = vc.count
         
-        label_b.text = String(counta)  
+        vc.count += 1
+        dismiss(animated: true)
+        aviewcontrol.text = String(vc.count)
+//        print("check2")
+        
         
     }
-  
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("BviewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("BviewDidAppear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("BviewWillDisappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("BviewDidDisAppear")
+    }
+    
+
 }
+
 ```

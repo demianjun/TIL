@@ -8,17 +8,16 @@
 
 import UIKit
 
-var countb = 0
-var label_a = UILabel()
-
 class BviewController: UIViewController {
     
     
+    var label_b = UILabel()
+
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-           
-           print("viewDidLoad")
+        super.viewDidLoad()
+        
+        print("viewDidLoad")
         
         view.backgroundColor = .systemYellow
         
@@ -29,21 +28,29 @@ class BviewController: UIViewController {
         view.addSubview(buttonA)
         
 //        let label_a = UILabel()
-        label_a.frame = CGRect(x: 185, y: 350, width: 150, height: 100)
-        label_a.textColor = .label
+        label_b.frame = CGRect(x: 185, y: 350, width: 150, height: 100)
+        label_b.textColor = .label
         
-        view.addSubview(label_a)
+        view.addSubview(label_b)
         
         
     }
     
+   
+    
     @objc private func aTapButton(_ sender: UIButton){
            
-        counta += 1
-        dismiss(animated: true)
-//        print("counta : \(counta)")
+        guard let vc = presentingViewController as? AviewController else  { return }
+        let aviewcontrol = vc.label_a
+        _ = vc.count
         
-        label_b.text = String(counta)
+        vc.count += 1
+        dismiss(animated: true)
+//        print("bviewcount : ", bviewcount)
+//        bviewcontrol.text = String(countb)
+        
+        aviewcontrol.text = String(vc.count)
+        print("check2")
         
         
     }
@@ -51,7 +58,6 @@ class BviewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         print("BviewWillAppear")
     }
     
