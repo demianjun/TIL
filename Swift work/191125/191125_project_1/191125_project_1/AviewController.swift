@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  191125_viewDIdLoad
+//  191125_viewDId  Load
 //
 //  Created by Demian on 2019/11/25.
 //  Copyright © 2019 Demian. All rights reserved.

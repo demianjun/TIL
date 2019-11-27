@@ -57,6 +57,8 @@
 - [191125 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191125/191125_project_1/191125_project_1_homework.md)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191125/191125_project_1.png)
 
+- [191126 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191126/191126_project_1/191126_project_1_homework.md)
+	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191126/191126_project_1.png)
 
 
 ## Swift practice
