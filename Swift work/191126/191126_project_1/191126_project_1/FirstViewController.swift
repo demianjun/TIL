@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class FirstViewController: UIViewController {
+//class ViewController: UIViewController {
+    
     var printLabel = UILabel()
     var inputTextField = UITextField()
     
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
+        
         
         
         let screenWidth = UIScreen.main.bounds.width
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
         
 //        printLabel.font = .systemFont(ofSize: 40)
 //        printLabel.textColor = .systemRed
+        
         
         printLabel.textColor = .label
         printLabel.textAlignment = .center

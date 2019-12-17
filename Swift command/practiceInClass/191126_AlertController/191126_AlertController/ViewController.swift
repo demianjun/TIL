@@ -45,9 +45,9 @@ class ViewController: UIViewController {
     @IBAction private func countUp (_ sender : Any) {
         
         let alertController = UIAlertController(title: "카운트추가", message: "", preferredStyle: .alert)
-        alertController.addTextField {
-            $0.placeholder = "정수값을 입력하세요"
-        }
+//        alertController.addTextField {
+//            $0.placeholder = "정수값을 입력하세요"
+//        }
         
         let addCountAction = UIAlertAction(title: "Add Count", style: .default) {
             _ in var addValue = 1
