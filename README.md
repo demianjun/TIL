@@ -94,11 +94,11 @@
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191206/191206_userDefault0.png)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191206/191206_userDefault1.png)
 
-- [1912012 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191212/191212_AutoLayOut.md)
+- [191212 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191212/191212_AutoLayOut.md)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191212/191212_AutoLayOut0.png)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191212/191212_AutoLayOut1.png)
 
-- [1912013 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191213/191213_PracticeOfLogIn.md)
+- [191213 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191213/191213_PracticeOfLogIn.md)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191213/191213_PracticeOfLogIn.png)
 
 
