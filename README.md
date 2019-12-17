@@ -102,6 +102,10 @@
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191213/191213_PracticeOfLogIn.png)
 
 
+- [191217 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191217/191217_TableViewPractice_Section.md)
+	- [TableView](https://github.com/demianjun/TIL/blob/master/Swift%20work/191217/tableviewsection.png)
+
+
 
 ## Swift practice
 
@@ -113,3 +117,10 @@
 
 - 191118 - OOP 연습문제
 	-  [Swift OOP practice](https://github.com/demianjun/TIL/blob/master/Swift%20practice/OOP_practice.md)
+
+- 191217 - TableView 연습문제
+	-  [Swift UITableView practice1](https://velog.io/@demianjun/UITableVeiw-Practice-1-a2k4a7f18h)
+	-  [Swift UITableView practice2](https://velog.io/@demianjun/UITableView-Practice-2-2tk4a7pbhs)
+	-  [Swift UITableView practice3](https://velog.io/@demianjun/UITableView-Practice-3-yck4a7ti7x)
+
+
