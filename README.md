@@ -26,6 +26,33 @@
 - 191125 - UIViewController 개념정리
 	- [UIViewController](https://github.com/demianjun/TIL/blob/master/Swift%20command/191125_UIViewController.md)
 
+- 191205 - Type Casing 개념정리
+	- [Type Casting1](https://velog.io/@demianjun/Type-Casting-f1k3s7lzyu)
+	- [Type Casting2](https://velog.io/@demianjun/Type-Casting-2-30k3s9yawf)
+
+- 191205 - Initializer 개념정리
+	- [Initializer](https://velog.io/@demianjun/Initializer)
+
+- 191206 - Singleton 개념정리
+	- [Singleton](https://velog.io/@demianjun/Singleton-v9k3tnd604)
+
+- 191206 - UserDefaults 개념정리
+	- [UserDefaults](https://velog.io/@demianjun/UserDefaults)
+
+- 191209 - Memory Management 개념정리
+	- [Memory Management](https://velog.io/@demianjun/Memory-Management-w1k3xy10ry)
+
+- 191209 - ARC (Auto Reference Counting) 개념정리
+	- [ARC (Auto Reference Counting)](https://velog.io/@demianjun/ARC-Auto-Reference-Counting)
+
+- 191209 - Struct 개념정리
+	- [Struct](https://velog.io/@demianjun/Struct)
+
+- 191210 - Delegate 개념정리
+	- [Delegate](https://velog.io/@demianjun/Delegate-6rk3zccwlt)
+
+- 191212 - AutoLayout 개념정리
+	- [AutoLayout](https://velog.io/@demianjun/AutoLayout-e1k428bbor)
 	
 
 ## Swift homework
@@ -62,6 +89,19 @@
 
 - [191203 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191203/191203_project_1/191203_project_1_homework.md)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191203/191203_project_1.png)
+
+- [191206 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191206/191206_userDefault.md)
+	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191206/191206_userDefault0.png)
+	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191206/191206_userDefault1.png)
+
+- [1912012 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191212/191212_AutoLayOut.md)
+	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191212/191212_AutoLayOut0.png)
+	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191212/191212_AutoLayOut1.png)
+
+- [1912013 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191213/191213_PracticeOfLogIn.md)
+	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191213/191213_PracticeOfLogIn.png)
+
+
 
 ## Swift practice
 
