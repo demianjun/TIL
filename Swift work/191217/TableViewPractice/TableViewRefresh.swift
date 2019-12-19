@@ -55,7 +55,7 @@ final class TableViewRefresh: UIViewController {
     @objc func randomData() {
         data = []
         setData = []
-            for _ in 0...range.count {
+            for _ in range {
                 if setData.count < 20 {
                 guard let temp = range.randomElement() else {return}
                 data.append(temp)
