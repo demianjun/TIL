@@ -96,7 +96,7 @@
 - [191203 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191203/191203_project_1/191203_project_1_homework.md)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191203/0.png)
 
-- [191205 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191205/191205_project_1/191205_project_1_homework.md)
+- [191205 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191205/191205_Initializer_homework.md)
 
 - [191206 homework](https://github.com/demianjun/TIL/blob/master/Swift%20work/191206/191206_userDefault.md)
 	- [Project_1](https://github.com/demianjun/TIL/blob/master/Swift%20work/191206/191206_userDefault0.png)
