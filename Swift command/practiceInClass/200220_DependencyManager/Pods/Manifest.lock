@@ -1,0 +1,16 @@
+PODS:
+  - RAMAnimatedTabBarController (5.1.0)
+
+DEPENDENCIES:
+  - RAMAnimatedTabBarController
+
+SPEC REPOS:
+  trunk:
+    - RAMAnimatedTabBarController
+
+SPEC CHECKSUMS:
+  RAMAnimatedTabBarController: b5c821298071fded801532216ad8a24394f89859
+
+PODFILE CHECKSUM: 00d123771b4c7f69b81f482873fd684c7c7deeaf
+
+COCOAPODS: 1.8.4

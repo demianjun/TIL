@@ -20,9 +20,9 @@ final class TableViewSection: UIViewController {
     
     override var description: String { "Practice 2 - Section" }
     
-//      let data = [5, 7, 16, 19, 22, 29, 30, 39, 44, 48, 50]
-    let data = Array(1...100)
-    var tableDic:[Int: [Int]] = [:]
+      let data = [5, 7, 16, 19, 22, 29, 30, 39, 44, 48, 50]
+//    let data = Array(1...100)
+    var tableDic: [Int: [Int]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()

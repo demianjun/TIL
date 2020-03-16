@@ -9,45 +9,45 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
-//    @IBAction private func didTapButton(_ sender : Any) {
-//        let alertController = UIAlertController(title: "타이틀", message: "메세지", preferredStyle: .alert)
-//
-//
-//        let okAction = UIAlertAction(title: "OK", style: .default) {
-//            (action) in print("OK 버튼")
-//        }
-//        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) {
-//            (action) in print("Delete 버튼")
-//        }// {     (action) in print("Delete 버튼")     } -> closure
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) {
-//            (action) in print("Cancel 버튼")
-//        } // cancel은 별도 스타일로 취급
-//
-//
-//        alertController.addAction(okAction)
-//        alertController.addAction(deleteAction)
-//        alertController.addAction(cancelAction)
-//
-//        present(alertController, animated: true)
-//
-//        print("Button")
-//    }
-            var i = 0
+    
+    //    @IBAction private func didTapButton(_ sender : Any) {
+    //        let alertController = UIAlertController(title: "타이틀", message: "메세지", preferredStyle: .alert)
+    //
+    //
+    //        let okAction = UIAlertAction(title: "OK", style: .default) {
+    //            (action) in print("OK 버튼")
+    //        }
+    //        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) {
+    //            (action) in print("Delete 버튼")
+    //        }// {     (action) in print("Delete 버튼")     } -> closure
+    //        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) {
+    //            (action) in print("Cancel 버튼")
+    //        } // cancel은 별도 스타일로 취급
+    //
+    //
+    //        alertController.addAction(okAction)
+    //        alertController.addAction(deleteAction)
+    //        alertController.addAction(cancelAction)
+    //
+    //        present(alertController, animated: true)
+    //
+    //        print("Button")
+    //    }
+    var i = 0
     @IBOutlet weak var label_count : UILabel!
     @IBOutlet weak var forAddButton : UIButton!
     
     @IBAction private func countUp (_ sender : Any) {
         
         let alertController = UIAlertController(title: "카운트추가", message: "", preferredStyle: .alert)
-//        alertController.addTextField {
-//            $0.placeholder = "정수값을 입력하세요"
-//        }
+        //        alertController.addTextField {
+        //            $0.placeholder = "정수값을 입력하세요"
+        //        }
         
         let addCountAction = UIAlertAction(title: "Add Count", style: .default) {
             _ in var addValue = 1
@@ -71,10 +71,10 @@ class ViewController: UIViewController {
         }
         
         
-//        alertController.addAction(addCountAction)
-//        alertController.addAction(resetAction)
-//        alertController.addAction(cancelAction)
-
+        //        alertController.addAction(addCountAction)
+        //        alertController.addAction(resetAction)
+        //        alertController.addAction(cancelAction)
+        
         
         for action in [addCountAction, resetAction, cancelAction] {
             

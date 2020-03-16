@@ -1,0 +1,6 @@
+framework module Pods_200220_DependencyManager {
+  umbrella header "Pods-200220_DependencyManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

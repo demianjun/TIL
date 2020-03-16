@@ -27,17 +27,8 @@ final class TableViewMultipleSelection: UIViewController  {
      selectedRow(s) - tableView 속성, 현재 선택된 행에 대한 정보
      multipleSelection - 다중 선택 가능 여부
      ***************************************************/
-    
-    let range = Array(1...70)
-    let subRange = 50
-    var data: [Int] = []
-    var setData: Set<Int> = []
-    var secondSetData: [Int] = []
-    var setToArray: [Int] = []
-    var selectRow: [IndexPath] = []
-    var didPick: [Int] = []
-    var didPickArr: [Int] = []
-    
+
+
     override var description: String {
         return "Task 1 - MultipleSelection"
     }
@@ -46,64 +37,58 @@ final class TableViewMultipleSelection: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        setTableView()
-        
-    }
-    
-    private func setTableView() {
         tableView.frame = view.frame
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
-        tableView.allowsMultipleSelection = true
-        
         view.addSubview(tableView)
         
-        let refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing...")
-        refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
-        tableView.refreshControl = refreshControl
-        makeRandom()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.allowsMultipleSelection = true
+        tableView.refreshControl = {
+            let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+            return refreshControl
+        }()
         
+        randomizeData()
     }
     
-    func makeRandom() {
-        data = []
-        setData = []
-        if selectRow.count == 0 {
-            for _ in range {
-                if setData.count < (range.count-subRange){
-                    guard let temp = range.randomElement() else {return}
-                    data.append(temp)
-                    setData = Set(data)
-                }
+    @objc func refreshData() {
+        var selectedData = [Int]()
+        if let selectedRows = tableView.indexPathsForSelectedRows {
+            for indexPath in selectedRows {
+                guard let cell = tableView.cellForRow(at: indexPath) else { return }
+                let number = Int(cell.textLabel!.text!)!
+                selectedData.append(number)
             }
-            print("setData: ",setData,setData.count)
-        }
-        if didPickArr.count == 0 {
-            setToArray = Array(setData)
+            randomizeData(offset: selectedRows.count)
+            data.insert(contentsOf: selectedData, at: 0)
         } else {
-            setToArray = Array(setData)
-            for i in didPickArr {
-                setToArray.remove(at: i)
-            }
-            print("New :",setToArray, setToArray.count)
+            randomizeData()
         }
-    }
-    
-    func saveArr() {
-        for indexPath in tableView.indexPathsForSelectedRows ?? [] {
-            didPickArr.append(setToArray[indexPath.row])
-        }
-        print("didPickArr :",didPickArr)
-    }
-    
-    @objc private func refreshAction() {
-        saveArr()
-        makeRandom()
+        
         tableView.refreshControl?.endRefreshing()
         tableView.reloadData()
+    }
+    
+    func randomizeData(offset: Int = 0) {
+        data.removeAll()
+        while data.count < numberOfData - offset {
+            data.append(generateRandonNumber())
+        }
+    }
+    
+    var data = [Int]()
+    let numberOfData = 20
+    func generateRandonNumber() -> Int {
+        #if swift(>=4.2)
+        let randomNumber = (0...numberOfData + 50).randomElement()!
+        #else
+        let randomNumber = Int(arc4random_uniform(UInt32(numberOfData + 50)))
+        #endif
+        
+        guard !data.contains(randomNumber) else { return generateRandonNumber() }
+        return randomNumber
     }
 }
 
@@ -111,27 +96,136 @@ final class TableViewMultipleSelection: UIViewController  {
 
 extension TableViewMultipleSelection: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return setToArray.count
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("arr :",setToArray)
-        didPick = []
-        didPickArr = []
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
-//        cell.textLabel?.text = "\(setToArray[indexPath.row])"
-        cell.textLabel?.text = "re"
+        cell.textLabel?.text = "\(data[indexPath.row])"
         return cell
     }
 }
 
+// MARK:- UITableViewDelegate
+
 extension TableViewMultipleSelection: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if setToArray[indexPath.row] <= 7 {
-            return nil
-        } else {
-            return indexPath
-        }
+        guard let cell = tableView.cellForRow(at: indexPath) else { return nil }
+        guard let text = cell.textLabel?.text else { return nil }
+        guard let number = Int(text) else { return nil }
+        guard number < 7 else { return indexPath }
+        return nil
     }
 }
 
+
+    
+//    let range = Array(1...70)
+//    let subRange = 50
+//    var data: [Int] = []
+//    var setData: Set<Int> = []
+//    var secondSetData: [Int] = []
+//    var setToArray: [Int] = []
+//    var selectRow: [IndexPath] = []
+//    var didPickArr: [Int] = []
+//
+//    override var description: String {
+//        return "Task 1 - MultipleSelection"
+//    }
+//
+//    let tableView = UITableView()
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        tableView.dataSource = self
+//        tableView.delegate = self
+//
+//        setTableView()
+//
+//    }
+//
+//    private func setTableView() {
+//        tableView.frame = view.frame
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
+//        tableView.allowsMultipleSelection = true
+//
+//        view.addSubview(tableView)
+//
+//        let refreshControl = UIRefreshControl()
+//        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing...")
+//        refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
+//        tableView.refreshControl = refreshControl
+//        makeRandom()
+//
+//    }
+//
+//    func makeRandom() {
+//        data = []
+//        setData = []
+//        if selectRow.count == 0 {
+//            for _ in range {
+//                if setData.count < (range.count-subRange){
+//                    guard let temp = range.randomElement() else {return}
+//                    data.append(temp)
+//                    setData = Set(data)
+//                }
+//            }
+//            print("setData: ",setData,setData.count)
+//        }
+//
+//        if didPickArr.count == 0 {
+//            setToArray = Array(setData)
+//        }
+//        else {
+//            setToArray = didPickArr
+//            for i in 0...(range.count-(subRange+1)-didPickArr.count) {
+//                setToArray.append(Array(setData)[i])
+//            }
+//            print("New :",setToArray, setToArray.count)
+//        }
+//
+//    }
+//
+//    func saveArr() {
+//        for indexPath in tableView.indexPathsForSelectedRows ?? [] {
+//            didPickArr.append(setToArray[indexPath.row])
+//        }
+//        print("didPickArr :",didPickArr)
+//    }
+//
+//    @objc private func refreshAction() {
+//        saveArr()
+//        makeRandom()
+//        tableView.refreshControl?.endRefreshing()
+//        tableView.reloadData()
+//    }
+//}
+//
+//// MARK: - UITableViewDataSource
+//
+//extension TableViewMultipleSelection: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return setToArray.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        print("arr :",setToArray)
+//        didPickArr = []
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
+//        cell.textLabel?.text = "\(setToArray[indexPath.row])"
+//        return cell
+//    }
+//}
+//
+//extension TableViewMultipleSelection: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+//        if setToArray[indexPath.row] <= 7 {
+//            return nil
+//        } else {
+//            return indexPath
+//        }
+//    }
+//}
+
+  
+ 
